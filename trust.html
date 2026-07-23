@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -38,7 +38,7 @@
   <link rel="apple-touch-icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    body { background: #08080d; overflow-x: hidden; }
+    html, body { background: #08080d; overflow-x: hidden !important; max-width: 100%; width: 100%; position: relative; }
 
     /* Background wave pinned right */
     .trust-bg-wave {
@@ -223,9 +223,12 @@
         grid-template-columns: 1fr 1fr !important;
         gap: 10px !important;
       }
-      /* Tutte le card: 1 colonna ciascuna */
+      /* Tutte le card: 1 colonna ciascuna, tranne l'ultima a larghezza piena */
       .trust-card--wide {
         grid-column: span 1 !important;
+      }
+      .trust-card:last-child {
+        grid-column: span 2 !important;
       }
       .trust-card {
         min-height: 150px;

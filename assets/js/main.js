@@ -111,18 +111,18 @@ class ParticleSystem {
   }
 
   update(dt = 0.016) {
-    this.time += dt * 0.10;
-    const clampedDt = Math.min(dt, 0.033);
+    this.time += dt * 0.25;
+    const speedFactor = dt * 60;
     for (const p of this.particles) {
       p.y  = p.by + Math.sin(this.time + p.phase + p.bx * this.opts.waveFreq) * p.amp;
-      p.bx += p.vx * clampedDt * 30;
-      p.by += p.vy * clampedDt * 30;
+      p.bx += p.vx * speedFactor;
+      p.by += p.vy * speedFactor;
       // mouse repulsion
       if (this.mouse.x !== null) {
         const dx = p.x - this.mouse.x, dy = p.y - this.mouse.y;
         const d = Math.sqrt(dx * dx + dy * dy);
         if (d < 80) {
-          const f = (80 - d) / 80 * 0.3 * clampedDt * 30;
+          const f = (80 - d) / 80 * 0.5 * speedFactor;
           p.bx += (dx / d) * f;
           p.by += (dy / d) * f;
         }
