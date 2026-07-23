@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust — Eternal Tech</title>
+  <meta name="description" content="La fiducia è un requisito, non una promessa. Eternal Tech tratta la fiducia come principio di progettazione, leggibile in cinque punti.">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <link rel="canonical" href="https://eternaltech.it/trust.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eternaltech.it/trust.html">
+  <meta property="og:title" content="Trust — Eternal Tech">
+  <meta property="og:description" content="La fiducia è un requisito, non una promessa. Eternal Tech tratta la fiducia come principio di progettazione, leggibile in cinque punti.">
+  <meta property="og:image" content="https://eternaltech.it/immagini/1.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trust — Eternal Tech">
+  <meta name="twitter:description" content="Fiducia by design: cinque principi di Eternal Tech per identità digitali sicure e controllabili.">
+  <link rel="preload" as="image" href="assets/immagini/1.webp" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Trust — Eternal Tech",
+    "url": "https://eternaltech.it/trust.html",
+    "description": "La fiducia è un requisito, non una promessa. Eternal Tech tratta la fiducia come principio di progettazione, leggibile in cinque punti."
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Tenor+Sans&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Tenor+Sans&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Tenor+Sans&display=swap"></noscript>
+  <meta name="theme-color" content="#08080d">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { background: #08080d; overflow-x: hidden; }
+
+    /* Background wave pinned right */
+    .trust-bg-wave {
+      position: fixed;
+      right: -5%;
+      top: 0;
+      height: 100vh;
+      width: 52%;
+      object-fit: cover;
+      object-position: left center;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.50;
+      mix-blend-mode: screen;
+      transform: rotate(90deg);
+      transform-origin: center center;
+    }
+
+    /* Header */
+    .trust-header {
+      text-align: center;
+      padding: 140px 0 64px;
+      position: relative;
+      z-index: 1;
+    }
+    .trust-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin: 20px 0 32px;
+      background: linear-gradient(135deg, #e8eaff 0%, #a8b4ff 40%, #7c6fe0 70%, #5b8fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .trust-intro {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Grid */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+    .trust-card--wide { grid-column: span 2; }
+
+    /* Card base */
+    .trust-card {
+      position: relative;
+      border-radius: 18px;
+      background: rgba(13, 18, 40, 0.62);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
+      min-height: 220px;
+      padding: 24px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .trust-card:hover {
+      border-color: rgba(120,130,255,0.25);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(120,130,255,0.12);
+    }
+
+    /* + button */
+    .trust-card-plus {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 7px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .trust-card-plus img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      filter: brightness(0) invert(1);
+      opacity: 0.75;
+    }
+    .trust-card:hover .trust-card-plus {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.30);
+    }
+    .trust-card:hover .trust-card-plus img { opacity: 1; }
+
+    /* Glows */
+    .trust-card-glow {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(40px);
+      opacity: 0.42;
+    }
+    .trust-card-glow--blue   { width: 160px; height: 160px; background: radial-gradient(circle, #3a7bd5, #00d2ff); top: 15%; right: 15%; }
+    .trust-card-glow--purple { width: 140px; height: 140px; background: radial-gradient(circle, #7c3aed, #a78bfa); top: 15%; left: 30%; }
+    .trust-card-glow--teal   { width: 130px; height: 130px; background: radial-gradient(circle, #0891b2, #06b6d4); top: 15%; right: 20%; }
+    .trust-card-glow--indigo { width: 140px; height: 140px; background: radial-gradient(circle, #4f46e5, #818cf8); top: 10%; left: 25%; }
+
+    .trust-card-body { position: relative; z-index: 1; }
+    .trust-card-title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin: 0 0 8px;
+      line-height: 1.2;
+    }
+    .trust-card-desc {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Banner */
+    .trust-banner {
+      position: relative;
+      z-index: 1;
+      border-radius: 14px;
+      background: rgba(13, 18, 40, 0.58);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 40px;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .trust-banner p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-1);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── MOBILE: 2 colonne uguali ── */
+    @media (max-width: 640px) {
+      .footer-logo img { height: 36px !important; }
+      .trust-header { padding: 100px 12px 40px; }
+
+      /* Immagine a schermo pieno, ruotata 90° */
+      .trust-bg-wave {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* swap larghezza/altezza: dopo rotate(90deg) si invertono */
+        width: 100vh;
+        height: 100vw;
+        transform: translate(-50%, -50%) rotate(90deg);
+        transform-origin: center center;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.45;
+        right: auto;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+      }
+      /* Tutte le card: 1 colonna ciascuna */
+      .trust-card--wide {
+        grid-column: span 1 !important;
+      }
+      .trust-card {
+        min-height: 150px;
+        padding: 16px 12px 18px !important;
+        border-radius: 14px !important;
+      }
+      .trust-card-plus {
+        width: 26px !important; height: 26px !important;
+        top: 10px !important; right: 10px !important;
+        padding: 5px !important;
+      }
+      .trust-card-title {
+        font-size: 0.88rem !important;
+        margin-bottom: 6px !important;
+        line-height: 1.25 !important;
+        word-break: break-word;
+      }
+      .trust-card-desc {
+        font-size: 0.72rem !important;
+        line-height: 1.5 !important;
+        word-break: break-word;
+      }
+      .trust-banner { padding: 20px 16px; margin-bottom: 60px; }
+      .trust-banner p { font-size: 0.88rem; }
+    }
+
+    @media (max-width: 420px) {
+      .trust-card { min-height: 130px; }
+      .trust-card-title { font-size: 0.82rem !important; }
+      .trust-card-desc { font-size: 0.70rem !important; }
+    }
+    </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:32px;width:auto;display:block;"></a>
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="index.html#about" data-i18n="nav_about">About</a>
+        <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
+        <a href="index.html#ecosistema" data-i18n="nav_ecosystem">Ecosystem</a>
+        <a href="trust.html" data-i18n="nav_trust">Trust</a>
+        <a href="#" class="nav-cta" data-open-contact data-i18n="nav_contact">Get in touch</a>
+      </nav>
+      
+      <!-- Language Switcher EN | IT -->
+      <div class="lang-switcher" aria-label="Language selection">
+        <button class="lang-switcher-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-switcher-btn" data-lang="it">IT</button>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BG WAVE -->
+  <img class="trust-bg-wave" src="assets/immagini/1.webp" alt="" aria-hidden="true">
+
+  <main id="main-content">
+    <div class="container" style="position:relative;z-index:1;">
+
+      <!-- Header -->
+      <div class="trust-header reveal">
+        <span class="section-badge" data-i18n="trust_badge">TRUST BY DESIGN</span>
+        <h1 class="trust-title" data-i18n="trust_title">Trust is a requirement,<br>not a promise.</h1>
+        <p class="trust-intro" data-i18n="trust_intro">When technology works on identity, voice, likeness and memory, trust enters the evaluation before the product does. So we treat it as a design principle — with the European regulatory framework as reference — and make it readable in five points.</p>
+      </div>
+
+      <!-- Cards -->
+      <div class="trust-grid">
+        <article class="trust-card trust-card--wide reveal" style="--delay:0.08s" aria-label="Authorization">
+          <div class="trust-card-glow trust-card-glow--blue"></div>
+          <button class="trust-card-plus" aria-label="Authorization"><img src="assets/ICONE/accessibilità.webp" alt="Authorization" loading="lazy"></button>
+          <div class="trust-card-body">
+            <h2 class="trust-card-title" data-i18n="trust_p1_title">Authorization</h2>
+            <p class="trust-card-desc" data-i18n="trust_p1_desc">Who authorizes the use of content, likeness, voice and materials.</p>
+          </div>
+        </article>
+
+        <article class="trust-card reveal" style="--delay:0.14s" aria-label="Sources and limits">
+          <div class="trust-card-glow trust-card-glow--purple"></div>
+          <button class="trust-card-plus" aria-label="Sources and limits"><img src="assets/ICONE/fonti.webp" alt="Sources and limits" loading="lazy"></button>
+          <div class="trust-card-body">
+            <h2 class="trust-card-title" data-i18n="trust_p2_title">Sources and limits</h2>
+            <p class="trust-card-desc" data-i18n="trust_p2_desc">Which sources feed the system, and which boundaries are set.</p>
+          </div>
+        </article>
+
+        <article class="trust-card reveal" style="--delay:0.18s" aria-label="Access">
+          <div class="trust-card-glow trust-card-glow--teal"></div>
+          <button class="trust-card-plus" aria-label="Access"><img src="assets/ICONE/accesso.webp" alt="Access" loading="lazy"></button>
+          <div class="trust-card-body">
+            <h2 class="trust-card-title" data-i18n="trust_p3_title">Access</h2>
+            <p class="trust-card-desc" data-i18n="trust_p3_desc">Who can reach a memory or a digital identity, and with which permissions.</p>
+          </div>
+        </article>
+
+        <article class="trust-card reveal" style="--delay:0.22s" aria-label="Review">
+          <div class="trust-card-glow trust-card-glow--indigo"></div>
+          <button class="trust-card-plus" aria-label="Review"><img src="assets/ICONE/revisione.webp" alt="Review" loading="lazy"></button>
+          <div class="trust-card-body">
+            <h2 class="trust-card-title" data-i18n="trust_p4_title">Review</h2>
+            <p class="trust-card-desc" data-i18n="trust_p4_desc">How outputs are checked — and what the technology is not allowed to do.</p>
+          </div>
+        </article>
+
+        <article class="trust-card reveal" style="--delay:0.26s" aria-label="Data and accountability">
+          <div class="trust-card-glow trust-card-glow--blue"></div>
+          <button class="trust-card-plus" aria-label="Data and accountability"><img src="assets/ICONE/dati.webp" alt="Data and accountability" loading="lazy"></button>
+          <div class="trust-card-body">
+            <h2 class="trust-card-title" data-i18n="trust_p5_title">Data and accountability</h2>
+            <p class="trust-card-desc" data-i18n="trust_p5_desc">How we handle data, deletion and responsibility of use.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Banner -->
+      <div class="trust-banner reveal" style="--delay:0.30s">
+        <p data-i18n="trust_close">Our Content Policy and Privacy Policy remain the legal references: this page translates them into readable commitments.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:70px;width:auto;display:block;max-width:none;"></div>
+          <p class="footer-tagline" data-i18n="footer_tagline">Eternal Tech is a technology company specializing in AI infrastructure for digital identity, persistent memory and intelligent agents.</p>
+          <p class="footer-address" data-i18n="footer_address">Via Sclafani, 40 · 95024 · Acireale (CT) · Italy</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footer_col_nav">Navigation</p>
+            <a href="index.html#about" data-i18n="nav_about">About</a>
+            <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
+            <a href="index.html#ecosystem" data-i18n="nav_ecosystem">Ecosystem</a>
+            <a href="trust.html" data-i18n="nav_trust">Trust</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footer_col_contact">Contact</p>
+            <a href="#" class="btn-primary btn-sm" data-open-contact data-i18n="nav_contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">All rights reserved © 2026 Eternal Tech</p>
+        <div class="footer-legal">
+          <a href="privacy.html" data-i18n="footer_privacy">Privacy Note</a>
+          <a href="cookies.html" data-i18n="footer_cookies">Cookie Policy</a>
+          <a href="terms.html" data-i18n="footer_terms">Terms and Conditions</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODALE CONTATTACI (POPUP) -->
+  <div class="contact-modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="contact-modal-card">
+      <button class="contact-modal-close" id="closeContactModal" aria-label="Chiudi modale">&times;</button>
+      <h2 class="contact-title" id="modalTitle">Contattaci</h2>
+      <form class="contact-form" id="modalContactForm" novalidate>
+        <label for="modalFullName" class="visually-hidden">Nome completo</label>
+        <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" required autocomplete="name">
+        
+        <label for="modalEmail" class="visually-hidden">Indirizzo email</label>
+        <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" required autocomplete="email">
+        
+        <label for="modalMessage" class="visually-hidden">Il tuo messaggio</label>
+        <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" required autocomplete="off"></textarea>
+        
+        <div class="contact-check-row">
+          <input type="checkbox" id="modalPrivacy" name="privacy" required>
+          <label for="modalPrivacy">
+            I confirm that I have read, understand and agree to the
+            <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, and I am of legal age*
+          </label>
+        </div>
+
+        <div class="contact-recaptcha">
+          <input type="checkbox" id="modalRecaptcha" name="recaptcha" aria-label="Non sono un robot">
+          <span class="contact-recaptcha-label">Non sono un robot</span>
+          <div class="contact-recaptcha-logo">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="#4A90D9" stroke-width="4"/>
+              <path d="M32 12 L52 42 H12 Z" fill="#4A90D9" opacity="0.7"/>
+              <circle cx="32" cy="32" r="8" fill="white"/>
+            </svg>
+            <span>reCAPTCHA</span>
+            <span>Privacy - Termini</span>
+          </div>
+        </div>
+
+        <button type="submit" class="contact-submit" id="modalSendBtn">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/lang.js" defer></script>
+  <script src="assets/js/menu.js" defer></script>
+</body>
+</html>
