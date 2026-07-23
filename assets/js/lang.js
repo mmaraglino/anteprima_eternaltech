@@ -18,21 +18,22 @@ const translations = {
 
     // About (#about)
     "about_eyebrow": "THE COMPANY",
-    "about_title": "A company before its products.",
-    "about_p1": "Eternal Tech builds systems — not a single tool that produces an output. Our key word isn't just AI: it's infrastructure. And it isn't abstract: it works on a defined territory — identity, memory, knowledge and agents.",
+    "about_title": "A company, before products.",
+    "about_p1": "Eternal Tech builds systems, not a single tool that produces an output. The key word is <strong>infrastructure</strong>.",
     "about_p2": "One qualifier is essential: control of use at every step of the lifecycle — consent, sources, permissions, limits, review. It's what makes the technology adoptable.",
-    "about_quote": "“AI has learned to generate. Now it has to learn to last: holding context, memory and rules of use over time. Eternal Tech exists to build that infrastructure.”",
-    "about_quote_author": "Lorenzo Massaro — CTO",
-    "about_cta": "See how we build",
+    "about_quote": "«AI has learned to generate. Now it must learn to last: maintain context, memory and rules of use over time. Eternal Tech was born to build this infrastructure.»",
+    "about_quote_author": "Lorenzo Massaro, CTO",
+    "about_cta": "THE INFRASTRUCTURE",
 
     // Vision (#vision)
+    "vision_badge": "VISION",
     "vision_title": "From output to continuity.",
-    "vision_p1": "The first wave of generative AI taught the market to produce content fast. The more mature demand is shifting toward systems that operate inside real workflows, hold context, keep what matters and respect rules of use. It's the shift from AI as an output generator to AI as persistent infrastructure.",
-    "vision_p2": "That is where we work: at the meeting point of AI infrastructure, digital representation and persistent memory. For us, value isn't generating more — it's maintaining continuity, context, access and control.",
+    "vision_subtitle": "For us, value isn't generating more — it's maintaining continuity, context, access and control.",
+    "vision_body": "The first wave of generative AI taught the market to produce content fast. The more mature demand is shifting toward systems capable of operating inside real workflows, holding context, preserving what matters and respecting rules of use. It's the shift from AI as an output generator to AI as persistent infrastructure. That is where we work: at the meeting point of AI infrastructure, digital representation and persistent memory.",
     "vision_col1_title": "Structure",
     "vision_col1_desc": "Content, documents, voice and knowledge become an ordered system.",
     "vision_col2_title": "Query",
-    "vision_col2_desc": "Memory doesn't sit in a static archive: it's accessible on demand.",
+    "vision_col2_desc": "Memory does not remain a static archive: it is accessible on demand.",
     "vision_col3_title": "Control",
     "vision_col3_desc": "Access, sources, limits and updates are part of the value — not an add-on.",
 
@@ -134,22 +135,23 @@ const translations = {
 
     // About (#about)
     "about_eyebrow": "LA SOCIETÀ",
-    "about_title": "Una società prima dei prodotti.",
-    "about_p1": "Eternal Tech costruisce sistemi — non un singolo strumento che produce un output. La nostra parola chiave non è solo AI: è infrastruttura. E non è astratta: lavora su un territorio definito — identità, memoria, conoscenza e agenti.",
+    "about_title": "Una società, prima dei prodotti.",
+    "about_p1": "Eternal Tech costruisce sistemi, non un singolo strumento che produce un output. La parola chiave è <strong>infrastruttura</strong>.",
     "about_p2": "Un qualificatore è essenziale: controllo d'uso in ogni fase del ciclo di vita — consenso, fonti, permessi, limiti, revisione. È ciò che rende la tecnologia adottabile.",
-    "about_quote": "“L'AI ha imparato a generare. Ora deve imparare a durare: mantenere contesto, memoria e regole d'uso nel tempo. Eternal Tech esiste per costruire quell'infrastruttura.”",
-    "about_quote_author": "Lorenzo Massaro — CTO",
-    "about_cta": "Scopri come costruiamo",
+    "about_quote": "«L'AI ha imparato a generare. Ora deve imparare a durare: mantenere contesto, memoria e regole d'uso nel tempo. Eternal Tech nasce per costruire questa infrastruttura.»",
+    "about_quote_author": "Lorenzo Massaro, CTO",
+    "about_cta": "L'INFRASTRUTTURA",
 
     // Vision (#vision)
+    "vision_badge": "VISIONE",
     "vision_title": "Dall'output alla continuità.",
-    "vision_p1": "La prima ondata di AI generativa ha insegnato al mercato a produrre contenuti velocemente. La domanda più matura si sta spostando verso sistemi che operano all'interno di flussi reali, mantengono il contesto, conservano ciò che conta e rispettano le regole d'uso. È il passaggio dall'AI come generatore di output all'AI come infrastruttura persistente.",
-    "vision_p2": "È lì che lavoriamo: al punto d'incontro tra infrastruttura AI, rappresentazione digitale e memoria persistente. Per noi il valore non è generare di più — è mantenere continuità, contesto, accesso e controllo.",
-    "vision_col1_title": "Struttura",
+    "vision_subtitle": "Il valore, per noi, non è generare di più — è mantenere continuità, contesto, accesso e controllo.",
+    "vision_body": "La prima ondata dell'AI generativa ha abituato il mercato a produrre contenuti in modo rapido. La domanda più matura si sta spostando verso sistemi capaci di operare dentro flussi di lavoro reali, mantenere il contesto, conservare ciò che conta e rispettare regole d'uso. È il passaggio dall'AI come generatore di output all'AI come infrastruttura persistente. È lì che lavoriamo: nel punto di incontro tra infrastruttura AI, rappresentazione digitale e memoria persistente.",
+    "vision_col1_title": "Strutturare",
     "vision_col1_desc": "Contenuti, documenti, voce e conoscenza diventano un sistema ordinato.",
-    "vision_col2_title": "Interrogazione",
-    "vision_col2_desc": "La memoria non risiede in un archivio statico: è accessibile su richiesta.",
-    "vision_col3_title": "Controllo",
+    "vision_col2_title": "Interrogare",
+    "vision_col2_desc": "La memoria non resta un archivio statico: è accessibile su richiesta.",
+    "vision_col3_title": "Controllare",
     "vision_col3_desc": "Accesso, fonti, limiti e aggiornamenti sono parte del valore — non un'aggiunta.",
 
     // Technology (#technology)
