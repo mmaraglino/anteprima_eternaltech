@@ -92,7 +92,7 @@ const translations = {
     "team_c3_desc": "Operations, strategy and go-to-market.",
     "team_c4_role": "Educator / Brand Ambassador",
     "team_c4_desc": "Technology storytelling and community relations.",
-    "team_bar_text": "Discover why to trust us",
+    "team_bar_text": "Why trust us",
 
     // Closing & Contact (#contact)
     "closing_title": "Continuity is the next<br>frontier of AI.",
@@ -114,7 +114,7 @@ const translations = {
     "modal_name_ph": "Full Name*",
     "modal_email_ph": "Email*",
     "modal_msg_ph": "Your Message*",
-    "modal_privacy_txt": "I confirm that I have read, understand and agree to the <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>, and I am of legal age*",
+    "modal_privacy_txt": "I confirm that I have read, understood and agree to the <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>, and I am of legal age*",
     "modal_recaptcha_label": "I'm not a robot",
     "modal_submit_btn": "Send Message",
     "modal_success_msg": "✓ Message sent successfully!<br>We will respond as soon as possible."
@@ -125,7 +125,7 @@ const translations = {
     "nav_about": "Chi siamo",
     "nav_technology": "Tecnologia",
     "nav_ecosystem": "Ecosistema",
-    "nav_trust": "Trust",
+    "nav_trust": "Affidabilità",
     "nav_contact": "Contattaci",
 
     // Hero (#top / #hero)
@@ -135,8 +135,8 @@ const translations = {
 
     // About (#about)
     "about_eyebrow": "LA SOCIETÀ",
-    "about_title": "Una società, prima dei prodotti.",
-    "about_p1": "Eternal Tech costruisce sistemi, non un singolo strumento che produce un output. La parola chiave è <strong>infrastruttura</strong>.",
+    "about_title": "Una società,<br>prima dei prodotti.",
+    "about_p1": "Eternal Tech costruisce sistemi, non un singolo strumento che produce un output.<br>La parola chiave è <strong>infrastruttura</strong>.",
     "about_p2": "Un qualificatore è essenziale: controllo d'uso in ogni fase del ciclo di vita — consenso, fonti, permessi, limiti, revisione. È ciò che rende la tecnologia adottabile.",
     "about_quote": "«L'AI ha imparato a generare. Ora deve imparare a durare: mantenere contesto, memoria e regole d'uso nel tempo. Eternal Tech nasce per costruire questa infrastruttura.»",
     "about_quote_author": "Lorenzo Massaro, CTO",
