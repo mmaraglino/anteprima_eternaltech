@@ -494,7 +494,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
+  overflow: hidden;
   background: radial-gradient(60% 60% at 55% 35%, #1a1a4a, #08080d);
   padding-top: 68px;
   box-sizing: border-box;
@@ -509,33 +509,31 @@ body {
 
 .hero-bg-img {
   position: absolute;
-  top: 52%;
-  bottom: -80px;
+  top: 22%;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  min-height: calc(48% + 80px);
+  height: 78%;
   object-fit: cover;
   object-position: center top;
   z-index: 0;
-  opacity: 0.85;
+  opacity: 1.0;
   pointer-events: none;
   
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%);
 }
 
 
 .hero-overlay {
   position: absolute;
-  top: 52%;
-  bottom: -80px;
-  left: 0; right: 0;
+  inset: 0;
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    transparent 50%,
-    rgba(9, 9, 26, 0.7) 78%,
+    transparent 55%,
+    rgba(9, 9, 26, 0.6) 82%,
+    #09091a 98%,
     #09091a 100%
   );
   z-index: 2;
