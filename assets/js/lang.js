@@ -12,7 +12,7 @@ const translations = {
     "nav_contact": "Get in touch",
 
     // Hero (#top / #hero)
-    "hero_title": "Governed AI infrastructure for digital identity, persistent memory and intelligent agents.",
+    "hero_title": "Governed AI infrastructure for digital identity, persistent memory<br>and intelligent agents.",
     "hero_subtitle": "Eternal Tech develops proprietary AI technologies to turn identity, knowledge and memory into systems that are structured, queryable and controllable over time.",
     "hero_scroll": "↓ Scroll for more",
 
@@ -23,7 +23,7 @@ const translations = {
     "about_p2": "One qualifier is essential: control of use at every step of the lifecycle — consent, sources, permissions, limits, review. It's what makes the technology adoptable.",
     "about_quote": "«AI has learned to generate. Now it must learn to last: maintain context, memory and rules of use over time. Eternal Tech was born to build this infrastructure.»",
     "about_quote_author": "Lorenzo Massaro, CTO",
-    "about_cta": "THE INFRASTRUCTURE",
+    "about_cta": "INFRASTRUCTURE",
 
     // Vision (#vision)
     "vision_badge": "VISION",
@@ -60,9 +60,9 @@ const translations = {
     "eco_detwin_name": "DeTwin",
     "eco_detwin_desc": "The digital twin platform that replicates, simulates and optimizes physical assets in real time. Cloud-native infrastructure, API-first.",
     "eco_detwin_cta": "Visit DeTwin ↗",
-    "eco_layer2_label": "LAYER 2 — PLATFORM · In development",
+    "eco_layer2_label": "LAYER 2 — PLATFORM<br>· In development",
     "eco_layer2_desc": "Orchestration, model management and data governance — the layer connecting infrastructure and applications.",
-    "eco_layer3_label": "LAYER 3 — VERTICAL APPLICATIONS · Coming next",
+    "eco_layer3_label": "LAYER 3 — VERTICAL APPLICATIONS<br>· Coming next",
     "eco_layer3_desc": "Vertical solutions for energy, manufacturing and logistics, built on our stack.",
 
     // Trust (#trust)
@@ -129,7 +129,7 @@ const translations = {
     "nav_contact": "Contattaci",
 
     // Hero (#top / #hero)
-    "hero_title": "Infrastruttura AI governata per identità digitale, memoria persistente e agenti intelligenti.",
+    "hero_title": "Infrastruttura AI governata per identità digitale, memoria persistente<br>e agenti intelligenti.",
     "hero_subtitle": "Eternal Tech sviluppa tecnologie AI proprietarie per trasformare identità, conoscenza e memoria in sistemi strutturati, interrogabili e controllabili nel tempo.",
     "hero_scroll": "↓ Scorri per saperne di più",
 
@@ -140,7 +140,7 @@ const translations = {
     "about_p2": "Un qualificatore è essenziale: controllo d'uso in ogni fase del ciclo di vita — consenso, fonti, permessi, limiti, revisione. È ciò che rende la tecnologia adottabile.",
     "about_quote": "«L'AI ha imparato a generare. Ora deve imparare a durare: mantenere contesto, memoria e regole d'uso nel tempo. Eternal Tech nasce per costruire questa infrastruttura.»",
     "about_quote_author": "Lorenzo Massaro, CTO",
-    "about_cta": "L'INFRASTRUTTURA",
+    "about_cta": "INFRASTRUTTURA",
 
     // Vision (#vision)
     "vision_badge": "VISIONE",
@@ -178,9 +178,9 @@ const translations = {
     "eco_detwin_name": "DeTwin",
     "eco_detwin_desc": "La piattaforma di gemelli digitali che replica, simula e ottimizza asset fisici in tempo reale. Infrastruttura cloud-native, API-first.",
     "eco_detwin_cta": "Vai a DeTwin ↗",
-    "eco_layer2_label": "LIVELLO 2 — PIATTAFORMA · In sviluppo",
+    "eco_layer2_label": "LIVELLO 2 — PIATTAFORMA<br>· In sviluppo",
     "eco_layer2_desc": "Orchestrazione, gestione dei modelli e governance dei dati — il layer che connette infrastruttura e applicazioni.",
-    "eco_layer3_label": "LIVELLO 3 — APPLICAZIONI VERTICALI · In arrivo",
+    "eco_layer3_label": "LIVELLO 3 — APPLICAZIONI VERTICALI<br>· In arrivo",
     "eco_layer3_desc": "Soluzioni verticali per energia, manifattura e logistica, costruite sul nostro stack.",
 
     // Trust (#trust)
