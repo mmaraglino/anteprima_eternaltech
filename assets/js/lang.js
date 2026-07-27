@@ -21,7 +21,7 @@ const translations = {
     "about_title": "A company, before products.",
     "about_p1": "Eternal Tech builds systems, not a single tool that produces an output. The key word is <strong>infrastructure</strong>.",
     "about_p2": "One qualifier is essential: control of use at every step of the lifecycle — consent, sources, permissions, limits, review. It's what makes the technology adoptable.",
-    "about_quote": "«AI has learned to generate. Now it must learn to last: maintain context, memory and rules of use over time. Eternal Tech was born to build this infrastructure.»",
+    "about_quote": "«<span class=\"quote-primary\">One mirror reflects the world. Two mirrors create infinity.</span><br><span class=\"quote-secondary\">AI begins to think the moment it stops reflecting us and starts reflecting itself.</span>»",
     "about_quote_author": "Lorenzo Massaro, CTO",
     "about_cta": "INFRASTRUCTURE",
 
@@ -138,7 +138,7 @@ const translations = {
     "about_title": "Una società,<br>prima dei prodotti.",
     "about_p1": "Eternal Tech costruisce sistemi, non un singolo strumento che produce un output.<br>La parola chiave è <strong>infrastruttura</strong>.",
     "about_p2": "Un qualificatore è essenziale: controllo d'uso in ogni fase del ciclo di vita — consenso, fonti, permessi, limiti, revisione. È ciò che rende la tecnologia adottabile.",
-    "about_quote": "«L'AI ha imparato a generare. Ora deve imparare a durare: mantenere contesto, memoria e regole d'uso nel tempo. Eternal Tech nasce per costruire questa infrastruttura.»",
+    "about_quote": "«<span class=\"quote-primary\">One mirror reflects the world. Two mirrors create infinity.</span><br><span class=\"quote-secondary\">AI begins to think the moment it stops reflecting us and starts reflecting itself.</span>»",
     "about_quote_author": "Lorenzo Massaro, CTO",
     "about_cta": "INFRASTRUTTURA",
 

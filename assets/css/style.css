@@ -696,21 +696,30 @@ body {
 }
 
 .quote-circle {
- width: 70px;
- height: 70px;
- border-radius: 50%;
- border: 1px solid var(--teal);
- margin-bottom: 28px;
+  display: none !important;
 }
 
 .societa-quote blockquote {
  font-family: var(--font-body);
  font-style: italic;
- font-size: 1.05rem;
- font-weight: 500;
  color: var(--text-1);
- line-height: 1.75;
+ line-height: 1.6;
  margin-bottom: 14px;
+}
+
+.quote-primary {
+  font-size: clamp(1.08rem, 2.0vw, 1.20rem);
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.quote-secondary {
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
 }
 
 .societa-quote cite {
@@ -1291,13 +1300,17 @@ body {
 }
 
 .team-card {
- border-radius: 28px;
+ border-radius: 20px;
  background: var(--bg-team);
  border: 1px solid rgba(113,124,165,0.20);
  overflow: hidden;
  display: flex;
  flex-direction: column;
+ align-items: center;
+ text-align: center;
  position: relative;
+ padding: 24px 22px;
+ min-height: auto;
 }
 
 .team-card::before {
@@ -1313,17 +1326,10 @@ body {
 }
 
 .team-avatar {
- width: 100%;
- aspect-ratio: 333 / 396;
- overflow: hidden;
- border-radius: 22px;
- margin: 8px;
- width: calc(100% - 16px);
- background: rgba(113,124,165,0.20);
+ display: none !important;
 }
-.team-avatar svg { width: 100%; height: 100%; display: block; }
 
-.team-info { padding: 16px 20px 20px; flex: 1; }
+.team-info { padding: 0; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
 
 .team-name {
  font-family: var(--font-body);
@@ -1331,6 +1337,7 @@ body {
  font-weight: 600;
  color: var(--text-1);
  text-transform: capitalize;
+ text-align: center;
  margin-bottom: 4px;
 }
 
@@ -1338,6 +1345,7 @@ body {
  font-family: var(--font-mono);
  font-size: 0.75rem;
  color: var(--text-2);
+ text-align: center;
  margin-bottom: 8px;
 }
 
@@ -1345,6 +1353,7 @@ body {
  font-size: 0.75rem;
  color: var(--text-2);
  line-height: 1.55;
+ text-align: center;
 }
 
 .team-expand {
