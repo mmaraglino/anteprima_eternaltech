@@ -2,6 +2,18 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var hasConsent = localStorage.getItem('et_cookie_consent') === 'accepted';
+    gtag('consent', 'default', {
+      'analytics_storage': hasConsent ? 'granted' : 'denied'
+    });
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Note — Eternal Tech</title>
   <meta name="description" content="Informativa sulla privacy di Eternal Tech: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.">
@@ -108,7 +120,7 @@
       <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
         <a href="index.html#about" data-i18n="nav_about">About</a>
         <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
-        <a href="index.html#ecosistema" data-i18n="nav_ecosystem">Ecosystem</a>
+        <a href="index.html#ecosystem" data-i18n="nav_ecosystem">Ecosystem</a>
         <a href="trust.html" data-i18n="nav_trust">Trust</a>
         <a href="#" class="nav-cta" data-open-contact data-i18n="nav_contact">Get in touch</a>
       </nav>
@@ -213,9 +225,9 @@
         <div class="footer-links">
           <div class="footer-col">
             <p class="footer-col-title">Navigazione</p>
-            <a href="index.html#societa">Chi siamo</a>
-            <a href="index.html#tecnologia">Tecnologia</a>
-            <a href="index.html#ecosistema">Ecosistema</a>
+            <a href="index.html#about" data-i18n="nav_about">Chi siamo</a>
+            <a href="index.html#technology" data-i18n="nav_technology">Tecnologia</a>
+            <a href="index.html#ecosystem" data-i18n="nav_ecosystem">Ecosistema</a>
             <a href="trust.html">Trust</a>
           </div>
           <div class="footer-col">

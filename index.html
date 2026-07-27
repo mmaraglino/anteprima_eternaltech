@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var hasConsent = localStorage.getItem('et_cookie_consent') === 'accepted';
+    gtag('consent', 'default', {
+      'analytics_storage': hasConsent ? 'granted' : 'denied'
+    });
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+  </script>
+  <!-- Google reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eternal Tech — Governed AI Infrastructure</title>
   <meta name="description" content="Eternal Tech develops proprietary AI technologies to turn identity, knowledge and memory into systems that are structured, queryable and controllable over time." />
@@ -421,40 +435,64 @@
     <div class="contact-modal-card">
       <button class="contact-modal-close" id="closeContactModal" aria-label="Close modal">&times;</button>
       <h2 class="contact-title" id="modalTitle" data-i18n="modal_title">Get in touch</h2>
-      <form class="contact-form" id="modalContactForm" novalidate>
-        <label for="modalFullName" class="visually-hidden">Full Name</label>
-        <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" data-i18n-placeholder="modal_name_ph" required autocomplete="name">
+      <form class="contact-form" id="modalContactForm" novalidate aria-live="polite">
+        <div id="modalFormStatus" class="form-status-msg" aria-live="polite"></div>
+
+        <div class="form-group">
+          <label for="modalFullName" class="visually-hidden">Full Name</label>
+          <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" data-i18n-placeholder="modal_name_ph" required autocomplete="name">
+          <span class="field-error-msg" id="modalFullNameError" aria-live="polite"></span>
+        </div>
         
-        <label for="modalEmail" class="visually-hidden">Email Address</label>
-        <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" data-i18n-placeholder="modal_email_ph" required autocomplete="email">
+        <div class="form-group">
+          <label for="modalEmail" class="visually-hidden">Email Address</label>
+          <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" data-i18n-placeholder="modal_email_ph" required autocomplete="email">
+          <span class="field-error-msg" id="modalEmailError" aria-live="polite"></span>
+        </div>
         
-        <label for="modalMessage" class="visually-hidden">Your Message</label>
-        <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" data-i18n-placeholder="modal_msg_ph" required autocomplete="off"></textarea>
+        <div class="form-group">
+          <label for="modalMessage" class="visually-hidden">Your Message</label>
+          <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" data-i18n-placeholder="modal_msg_ph" required autocomplete="off"></textarea>
+          <span class="field-error-msg" id="modalMessageError" aria-live="polite"></span>
+        </div>
         
-        <div class="contact-check-row">
-          <input type="checkbox" id="modalPrivacy" name="privacy" required>
-          <label for="modalPrivacy" data-i18n="modal_privacy_txt">
-            I confirm that I have read, understood and agree to the
-            <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, and I am of legal age*
-          </label>
+        <div class="form-group">
+          <div class="contact-check-row">
+            <input type="checkbox" id="modalPrivacy" name="privacy" required>
+            <label for="modalPrivacy" data-i18n="modal_privacy_txt">
+              I confirm that I have read, understood and agree to the
+              <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, and I am of legal age*
+            </label>
+          </div>
+          <span class="field-error-msg" id="modalPrivacyError" aria-live="polite"></span>
         </div>
 
-        <div class="contact-recaptcha">
-          <input type="checkbox" id="modalRecaptcha" name="recaptcha" aria-label="I am not a robot">
-          <span class="contact-recaptcha-label" data-i18n="modal_recaptcha_label">I'm not a robot</span>
-          <div class="contact-recaptcha-logo">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="30" stroke="#4A90D9" stroke-width="4"/>
-              <path d="M32 12 L52 42 H12 Z" fill="#4A90D9" opacity="0.7"/>
-              <circle cx="32" cy="32" r="8" fill="white"/>
-            </svg>
-            <span>reCAPTCHA</span>
-            <span>Privacy - Terms</span>
-          </div>
+        <div class="contact-recaptcha-wrap">
+          <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+          <span class="field-error-msg" id="modalRecaptchaError" aria-live="polite"></span>
         </div>
 
         <button type="submit" class="contact-submit" id="modalSendBtn" data-i18n="modal_submit_btn">Send Message</button>
       </form>
+    </div>
+  </div>
+
+  <!-- ══════════════ COOKIE & TERMS CONSENT BANNER ══════════════ -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite" role="dialog" aria-label="Cookie and Terms Consent">
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-badge">
+        <span class="pulse-dot"></span>
+        <span data-i18n="cookie_eyebrow">PRIVACY & COOKIE</span>
+      </div>
+      <div class="cookie-banner-body">
+        <p data-i18n="cookie_text">
+          Questo sito utilizza cookie ed infrastrutture analitiche per offrire la migliore esperienza. Proseguendo o cliccando "Accetta tutti", acconsenti all'uso dei cookie ed accetti i nostri <a href="terms.html" target="_blank" rel="noopener">Termini & Condizioni</a> e la <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="btn-ghost-sm cookie-btn-decline" id="cookieDecline" data-i18n="cookie_btn_decline">Solo necessari</button>
+        <button class="btn-primary cookie-btn-accept" id="cookieAccept" data-i18n="cookie_btn_accept">Accetta tutti</button>
+      </div>
     </div>
   </div>
 
