@@ -1323,6 +1323,15 @@ body {
  position: relative;
  padding: 24px 22px;
  min-height: auto;
+ text-decoration: none;
+ color: inherit;
+ cursor: pointer;
+ transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.team-card:hover {
+ border-color: rgba(120,130,255,0.40);
+ transform: translateY(-4px);
+ box-shadow: 0 12px 32px rgba(0,0,0,0.45);
 }
 
 .team-card::before {
