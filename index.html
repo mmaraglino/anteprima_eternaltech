@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
   <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,8 +15,6 @@
     });
     gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
   </script>
-  <!-- Google reCAPTCHA v2 -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eternal Tech — Governed AI Infrastructure</title>
   <meta name="description" content="Eternal Tech develops proprietary AI technologies to turn identity, knowledge and memory into systems that are structured, queryable and controllable over time." />
@@ -50,8 +49,9 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Host+Grotesk:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono:wght@400;500;600&display=swap"></noscript>
   <meta name="theme-color" content="#08080d">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -60,7 +60,7 @@
   <!-- ══════════════ NAVBAR ══════════════ -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#top" class="nav-logo" id="logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:32px;width:auto;display:block;"></a>
+      <a href="#top" class="nav-logo" id="logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" decoding="async" style="height:32px;width:auto;display:block;"></a>
       <nav class="nav-links" id="nav-links">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#technology" data-i18n="nav_technology">Technology</a>
@@ -85,7 +85,7 @@
   <!-- ══════════════ 1. HERO (#top) ══════════════ -->
   <div id="main-content" tabindex="-1" style="position:absolute;top:0;left:0;"></div>
   <section class="hero" id="top">
-    <img class="hero-bg-img" src="assets/immagini/1.webp" alt="" aria-hidden="true" fetchpriority="high" width="1920" height="1071">
+    <img class="hero-bg-img" src="assets/immagini/1.webp" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1920" height="1071">
     <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -128,7 +128,7 @@
 
   <!-- ══════════════ 3. VISION (#vision) ══════════════ -->
   <section class="visione" id="vision">
-    <img class="visione-wave" src="assets/immagini/2.webp" alt="" aria-hidden="true" loading="lazy" width="1920" height="1071">
+    <img class="visione-wave" src="assets/immagini/2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1920" height="1071">
     <div class="container">
 
       <div class="visione-header reveal">
@@ -193,7 +193,7 @@
         <!-- Card 1: Proprietary technology -->
         <article class="tech-card tech-card--wide glass-card reveal" style="--delay:0s">
           <div class="trust-card-glow trust-card-glow--blue"></div>
-          <div class="card-plus"><img src="assets/ICONE/tecnologia proprietaria.webp" alt="Proprietary technology" loading="lazy"></div>
+          <div class="card-plus"><img src="assets/ICONE/tecnologia-proprietaria.webp" alt="Proprietary technology" loading="lazy" decoding="async"></div>
           <div class="tech-card-body">
             <h3 data-i18n="tech_card1_title">Tecnologia proprietaria</h3>
             <p data-i18n="tech_card1_desc">Sviluppiamo in casa l'architettura che usiamo: identity engine, ingestione semantica, retrieval controllato e flussi di pubblicazione. Componenti di uno stesso stack, non iniziative scollegate.</p>
@@ -203,7 +203,7 @@
         <!-- Card 2: Persistent AI -->
         <article class="tech-card glass-card reveal" style="--delay:0.08s">
           <div class="trust-card-glow trust-card-glow--purple"></div>
-          <div class="card-plus"><img src="assets/ICONE/ai persistente.webp" alt="Persistent AI" loading="lazy"></div>
+          <div class="card-plus"><img src="assets/ICONE/ai-persistente.webp" alt="Persistent AI" loading="lazy" decoding="async"></div>
           <div class="tech-card-body">
             <h3 data-i18n="tech_card2_title">AI persistente</h3>
             <p data-i18n="tech_card2_desc">Sistemi progettati per durare oltre la singola sessione: mantengono contesto, memoria e coerenza nel tempo.</p>
@@ -213,7 +213,7 @@
         <!-- Card 3: Controlled digital identity -->
         <article class="tech-card glass-card reveal" style="--delay:0.16s">
           <div class="trust-card-glow trust-card-glow--teal"></div>
-          <div class="card-plus"><img src="assets/ICONE/identità digitali.webp" alt="Controlled digital identity" loading="lazy"></div>
+          <div class="card-plus"><img src="assets/ICONE/identità-digitali.webp" alt="Controlled digital identity" loading="lazy" decoding="async"></div>
           <div class="tech-card-body">
             <h3 data-i18n="tech_card3_title">Identità digitale controllata</h3>
             <p data-i18n="tech_card3_desc">Ogni identità digitale ha fonti dichiarate, autorizzazioni, limiti e responsabilità. Il controllo è contenuto, non nota a margine.</p>
@@ -223,7 +223,7 @@
         <!-- Card 4: Memory as living heritage -->
         <article class="tech-card glass-card reveal" style="--delay:0.24s">
           <div class="trust-card-glow trust-card-glow--indigo"></div>
-          <div class="card-plus"><img src="assets/ICONE/memoria.webp" alt="Memory as living heritage" loading="lazy"></div>
+          <div class="card-plus"><img src="assets/ICONE/memoria.webp" alt="Memory as living heritage" loading="lazy" decoding="async"></div>
           <div class="tech-card-body">
             <h3 data-i18n="tech_card4_title">Memoria come patrimonio vivo</h3>
             <p data-i18n="tech_card4_desc">La memoria non è un archivio da conservare: è conoscenza da usare e trasmettere — saperi, metodo, competenze, storia d'impresa e cultura.</p>
@@ -233,7 +233,7 @@
         <!-- Card 5: High-value applications -->
         <article class="tech-card glass-card reveal" style="--delay:0.32s">
           <div class="trust-card-glow trust-card-glow--blue"></div>
-          <div class="card-plus"><img src="assets/ICONE/applicazioni ad alto valore.webp" alt="High-value applications" loading="lazy"></div>
+          <div class="card-plus"><img src="assets/ICONE/applicazioni-ad-alto-valore.webp" alt="High-value applications" loading="lazy" decoding="async"></div>
           <div class="tech-card-body">
             <h3 data-i18n="tech_card5_title">Applicazioni ad alto valore</h3>
             <p data-i18n="tech_card5_desc">Il sistema serve contesti professionali, culturali e organizzativi: formazione, archivi, storia d'impresa, competenze e mestieri.</p>
@@ -243,7 +243,7 @@
         <!-- Card 6: Open standards -->
         <article class="tech-card glass-card tech-card--wide reveal" style="--delay:0.40s">
           <div class="trust-card-glow trust-card-glow--purple"></div>
-          <div class="card-plus"><img src="assets/ICONE/standard aperti.webp" alt="Open standards" loading="lazy"></div>
+          <div class="card-plus"><img src="assets/ICONE/standard-aperti.webp" alt="Open standards" loading="lazy" decoding="async"></div>
           <div class="tech-card-body">
             <h3 data-i18n="tech_card6_title">Standard Aperti</h3>
             <p data-i18n="tech_card6_desc">Costruiamo su protocolli aperti e interoperabili, come MCP: l'infrastruttura si integra negli stack esistenti, non li sostituisce.</p>
@@ -257,7 +257,7 @@
 
   <!-- ══════════════ DIAGONAL WAVE ══════════════ -->
   <div class="diagonal-wave-wrap" aria-hidden="true">
-    <img src="assets/immagini/3.webp" alt="" class="diagonal-wave-img" loading="lazy" width="1920" height="1071">
+    <img src="assets/immagini/3.webp" alt="" class="diagonal-wave-img" loading="lazy" decoding="async" width="1920" height="1071">
   </div>
 
   <!-- ══════════════ 5. ECOSYSTEM (#ecosystem) ══════════════ -->
@@ -380,7 +380,7 @@
       <a href="#" data-open-contact class="btn-primary btn-cta" data-i18n="closing_cta">Get in touch</a>
     </div>
     <div class="fullscreen-img-section" aria-hidden="true">
-      <img src="assets/immagini/4.webp" alt="" class="fullscreen-img" loading="lazy" width="1920" height="1071">
+      <img src="assets/immagini/4.webp" alt="" class="fullscreen-img" loading="lazy" decoding="async" width="1920" height="1071">
     </div>
   </section>
 
@@ -390,7 +390,7 @@
 
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:70px;width:auto;display:block;max-width:none;"></div>
+          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" loading="lazy" decoding="async" style="height:70px;width:auto;display:block;max-width:none;"></div>
           <p class="footer-tagline" data-i18n="footer_tagline">Eternal Tech is a technology company specializing in AI infrastructure for digital identity, persistent memory and intelligent agents.</p>
           <p class="footer-address" data-i18n="footer_address">Via Sclafani, 40 · 95024 · Acireale (CT) · Italy</p>
         </div>
@@ -435,7 +435,7 @@
     <div class="contact-modal-card">
       <button class="contact-modal-close" id="closeContactModal" aria-label="Close modal">&times;</button>
       <h2 class="contact-title" id="modalTitle" data-i18n="modal_title">Get in touch</h2>
-      <form class="contact-form" id="modalContactForm" novalidate aria-live="polite">
+      <form class="contact-form" id="modalContactForm" action="mailto:info@eternaltech.ai" method="post" enctype="text/plain" novalidate aria-live="polite">
         <div id="modalFormStatus" class="form-status-msg" aria-live="polite"></div>
 
         <div class="form-group">

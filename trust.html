@@ -2,8 +2,9 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
   <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,8 +15,6 @@
     });
     gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
   </script>
-  <!-- Google reCAPTCHA v2 -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trust — Eternal Tech</title>
   <meta name="description" content="La fiducia è un requisito, non una promessa. Eternal Tech tratta la fiducia come principio di progettazione, leggibile in cinque punti.">
@@ -48,8 +47,9 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Tenor+Sans&display=swap"></noscript>
   <meta name="theme-color" content="#08080d">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     html, body { background: #08080d; overflow-x: hidden !important; max-width: 100%; width: 100%; position: relative; }
@@ -135,17 +135,16 @@
     /* + button */
     .trust-card-plus {
       position: absolute;
-      top: 16px; right: 16px;
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
+      top: 20px; right: 20px;
+      width: 24px; height: 24px;
+      border: none;
+      background: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      padding: 7px;
-      transition: background 0.2s, border-color 0.2s;
+      padding: 0;
+      transition: opacity 0.2s ease;
     }
     .trust-card-plus img {
       width: 100%;
@@ -154,10 +153,11 @@
       display: block;
       filter: brightness(0) invert(1);
       opacity: 0.75;
+      transition: opacity 0.2s ease;
     }
     .trust-card:hover .trust-card-plus {
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(255,255,255,0.30);
+      background: transparent;
+      border: none;
     }
     .trust-card:hover .trust-card-plus img { opacity: 1; }
 
@@ -251,9 +251,11 @@
         border-radius: 14px !important;
       }
       .trust-card-plus {
-        width: 26px !important; height: 26px !important;
-        top: 10px !important; right: 10px !important;
-        padding: 5px !important;
+        width: 20px !important; height: 20px !important;
+        top: 12px !important; right: 12px !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
       }
       .trust-card-title {
         font-size: 0.88rem !important;
@@ -283,7 +285,7 @@
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:32px;width:auto;display:block;"></a>
+      <a href="index.html" class="nav-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" decoding="async" style="height:32px;width:auto;display:block;"></a>
       <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
         <a href="index.html#about" data-i18n="nav_about">About</a>
         <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
@@ -306,7 +308,7 @@
   </header>
 
   <!-- BG WAVE -->
-  <img class="trust-bg-wave" src="assets/immagini/1.webp" alt="" aria-hidden="true">
+  <img class="trust-bg-wave" src="assets/immagini/1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
 
   <main id="main-content">
     <div class="container" style="position:relative;z-index:1;">
@@ -322,7 +324,7 @@
       <div class="trust-grid">
         <article class="trust-card trust-card--wide reveal" style="--delay:0.08s" aria-label="Authorization">
           <div class="trust-card-glow trust-card-glow--blue"></div>
-          <button class="trust-card-plus" aria-label="Authorization"><img src="assets/ICONE/accessibilità.webp" alt="Authorization" loading="lazy"></button>
+          <button class="trust-card-plus" aria-label="Authorization"><img src="assets/ICONE/accessibilità.webp" alt="Authorization" loading="lazy" decoding="async"></button>
           <div class="trust-card-body">
             <h2 class="trust-card-title" data-i18n="trust_p1_title">Authorization</h2>
             <p class="trust-card-desc" data-i18n="trust_p1_desc">Who authorizes the use of content, likeness, voice and materials.</p>
@@ -331,7 +333,7 @@
 
         <article class="trust-card reveal" style="--delay:0.14s" aria-label="Sources and limits">
           <div class="trust-card-glow trust-card-glow--purple"></div>
-          <button class="trust-card-plus" aria-label="Sources and limits"><img src="assets/ICONE/fonti.webp" alt="Sources and limits" loading="lazy"></button>
+          <button class="trust-card-plus" aria-label="Sources and limits"><img src="assets/ICONE/fonti.webp" alt="Sources and limits" loading="lazy" decoding="async"></button>
           <div class="trust-card-body">
             <h2 class="trust-card-title" data-i18n="trust_p2_title">Sources and limits</h2>
             <p class="trust-card-desc" data-i18n="trust_p2_desc">Which sources feed the system, and which boundaries are set.</p>
@@ -340,7 +342,7 @@
 
         <article class="trust-card reveal" style="--delay:0.18s" aria-label="Access">
           <div class="trust-card-glow trust-card-glow--teal"></div>
-          <button class="trust-card-plus" aria-label="Access"><img src="assets/ICONE/accesso.webp" alt="Access" loading="lazy"></button>
+          <button class="trust-card-plus" aria-label="Access"><img src="assets/ICONE/accesso.webp" alt="Access" loading="lazy" decoding="async"></button>
           <div class="trust-card-body">
             <h2 class="trust-card-title" data-i18n="trust_p3_title">Access</h2>
             <p class="trust-card-desc" data-i18n="trust_p3_desc">Who can reach a memory or a digital identity, and with which permissions.</p>
@@ -349,7 +351,7 @@
 
         <article class="trust-card reveal" style="--delay:0.22s" aria-label="Review">
           <div class="trust-card-glow trust-card-glow--indigo"></div>
-          <button class="trust-card-plus" aria-label="Review"><img src="assets/ICONE/revisione.webp" alt="Review" loading="lazy"></button>
+          <button class="trust-card-plus" aria-label="Review"><img src="assets/ICONE/revisione.webp" alt="Review" loading="lazy" decoding="async"></button>
           <div class="trust-card-body">
             <h2 class="trust-card-title" data-i18n="trust_p4_title">Review</h2>
             <p class="trust-card-desc" data-i18n="trust_p4_desc">How outputs are checked — and what the technology is not allowed to do.</p>
@@ -358,7 +360,7 @@
 
         <article class="trust-card reveal" style="--delay:0.26s" aria-label="Data and accountability">
           <div class="trust-card-glow trust-card-glow--blue"></div>
-          <button class="trust-card-plus" aria-label="Data and accountability"><img src="assets/ICONE/dati.webp" alt="Data and accountability" loading="lazy"></button>
+          <button class="trust-card-plus" aria-label="Data and accountability"><img src="assets/ICONE/dati.webp" alt="Data and accountability" loading="lazy" decoding="async"></button>
           <div class="trust-card-body">
             <h2 class="trust-card-title" data-i18n="trust_p5_title">Data and accountability</h2>
             <p class="trust-card-desc" data-i18n="trust_p5_desc">How we handle data, deletion and responsibility of use.</p>
@@ -380,7 +382,7 @@
 
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:70px;width:auto;display:block;max-width:none;"></div>
+          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" loading="lazy" decoding="async" style="height:70px;width:auto;display:block;max-width:none;"></div>
           <p class="footer-tagline" data-i18n="footer_tagline">Eternal Tech is a technology company specializing in AI infrastructure for digital identity, persistent memory and intelligent agents.</p>
           <p class="footer-address" data-i18n="footer_address">Via Sclafani, 40 · 95024 · Acireale (CT) · Italy</p>
         </div>
@@ -423,26 +425,26 @@
   <!-- MODALE CONTATTACI (POPUP) -->
   <div class="contact-modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="contact-modal-card">
-      <button class="contact-modal-close" id="closeContactModal" aria-label="Chiudi modale">&times;</button>
-      <h2 class="contact-title" id="modalTitle">Contattaci</h2>
-      <form class="contact-form" id="modalContactForm" novalidate aria-live="polite">
+      <button class="contact-modal-close" id="closeContactModal" aria-label="Close modal">&times;</button>
+      <h2 class="contact-title" id="modalTitle" data-i18n="modal_title">Get in touch</h2>
+      <form class="contact-form" id="modalContactForm" action="mailto:info@eternaltech.ai" method="post" enctype="text/plain" novalidate aria-live="polite">
         <div id="modalFormStatus" class="form-status-msg" aria-live="polite"></div>
 
         <div class="form-group">
-          <label for="modalFullName" class="visually-hidden">Nome completo</label>
-          <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" required autocomplete="name">
+          <label for="modalFullName" class="visually-hidden">Full Name</label>
+          <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" data-i18n-placeholder="modal_name_ph" required autocomplete="name">
           <span class="field-error-msg" id="modalFullNameError" aria-live="polite"></span>
         </div>
         
         <div class="form-group">
-          <label for="modalEmail" class="visually-hidden">Indirizzo email</label>
-          <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" required autocomplete="email">
+          <label for="modalEmail" class="visually-hidden">Email Address</label>
+          <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" data-i18n-placeholder="modal_email_ph" required autocomplete="email">
           <span class="field-error-msg" id="modalEmailError" aria-live="polite"></span>
         </div>
         
         <div class="form-group">
-          <label for="modalMessage" class="visually-hidden">Il tuo messaggio</label>
-          <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" required autocomplete="off"></textarea>
+          <label for="modalMessage" class="visually-hidden">Your Message</label>
+          <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" data-i18n-placeholder="modal_msg_ph" required autocomplete="off"></textarea>
           <span class="field-error-msg" id="modalMessageError" aria-live="polite"></span>
         </div>
         
@@ -462,7 +464,7 @@
           <span class="field-error-msg" id="modalRecaptchaError" aria-live="polite"></span>
         </div>
 
-        <button type="submit" class="contact-submit" id="modalSendBtn">Send Message</button>
+        <button type="submit" class="contact-submit" id="modalSendBtn" data-i18n="modal_submit_btn">Send Message</button>
       </form>
     </div>
   </div>

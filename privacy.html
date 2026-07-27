@@ -2,8 +2,8 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -25,7 +25,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Tenor+Sans&display=swap">
   <meta name="theme-color" content="#060B15">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     html { overflow-x: hidden; }
@@ -112,11 +114,11 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
-  <img class="legal-bg-wave" src="assets/immagini/2.webp" alt="" aria-hidden="true" loading="lazy">
+  <img class="legal-bg-wave" src="assets/immagini/2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
 
   <header class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:35px;width:auto;display:block;"></a>
+      <a href="index.html" class="nav-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" decoding="async" style="height:32px;width:auto;display:block;"></a>
       <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
         <a href="index.html#about" data-i18n="nav_about">About</a>
         <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
@@ -149,7 +151,7 @@
 
       <div class="legal-card reveal">
         <h2>Titolare del trattamento</h2>
-        <p><strong>Eternal Tech S.r.l.</strong><br>Via Sclafani, 40 &mdash; 95024 Acireale (CT), Italia<br>Email: <a href="mailto:privacy@eternaltech.it">privacy@eternaltech.it</a></p>
+        <p><strong>Eternal Tech S.r.l.</strong><br>Via Sclafani, 40 &mdash; 95024 Acireale (CT), Italia<br>Email: <a href="mailto:info@eternaltech.ai">info@eternaltech.ai</a></p>
         <p>Eternal Tech &egrave; responsabile della gestione di questo sito web e di tutti i dati raccolti tramite esso.</p>
       </div>
 
@@ -199,7 +201,7 @@
           <li>Opporti al trattamento (art. 21)</li>
           <li>Revocare in qualsiasi momento il consenso prestato</li>
         </ul>
-        <p>Scrivi a <a href="mailto:privacy@eternaltech.it">privacy@eternaltech.it</a> per esercitare i tuoi diritti. Puoi inoltre proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la Protezione dei Dati Personali</a>.</p>
+        <p>Scrivi a <a href="mailto:info@eternaltech.ai">info@eternaltech.ai</a> per esercitare i tuoi diritti. Puoi inoltre proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la Protezione dei Dati Personali</a>.</p>
       </div>
 
       <div class="legal-card reveal">
@@ -218,7 +220,7 @@
     <div class="container footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" style="height:70px;width:auto;display:block;"></div>
+          <div class="nav-logo footer-logo"><img src="assets/logo.webp" width="678" height="130" alt="Eternal Tech" loading="lazy" decoding="async" style="height:70px;width:auto;display:block;max-width:none;"></div>
           <p class="footer-tagline">Eternal Tech &egrave; una societ&agrave; tecnologica specializzata in infrastrutture AI per identit&agrave; digitali, memoria persistente e agenti intelligenti.</p>
           <p class="footer-address">Via Sclafani, 40 &middot; 95024 &middot; Acireale (CT) &middot; Italy</p>
         </div>
@@ -254,46 +256,71 @@
   <!-- MODALE CONTATTACI (POPUP) -->
   <div class="contact-modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="contact-modal-card">
-      <button class="contact-modal-close" id="closeContactModal" aria-label="Chiudi modale">&times;</button>
-      <h2 class="contact-title" id="modalTitle">Contattaci</h2>
-      <form class="contact-form" id="modalContactForm" novalidate>
-        <label for="modalFullName" class="visually-hidden">Nome completo</label>
-        <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" required autocomplete="name">
-        
-        <label for="modalEmail" class="visually-hidden">Indirizzo email</label>
-        <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" required autocomplete="email">
-        
-        <label for="modalMessage" class="visually-hidden">Il tuo messaggio</label>
-        <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" required autocomplete="off"></textarea>
-        
-        <div class="contact-check-row">
-          <input type="checkbox" id="modalPrivacy" name="privacy" required>
-          <label for="modalPrivacy" data-i18n="modal_privacy_txt">
-            I confirm that I have read, understood and agree to the
-            <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, and I am of legal age*
-          </label>
-        </div>
+      <button class="contact-modal-close" id="closeContactModal" aria-label="Close modal">&times;</button>
+      <h2 class="contact-title" id="modalTitle" data-i18n="modal_title">Get in touch</h2>
+      <form class="contact-form" id="modalContactForm" action="mailto:info@eternaltech.ai" method="post" enctype="text/plain" novalidate aria-live="polite">
+        <div id="modalFormStatus" class="form-status-msg" aria-live="polite"></div>
 
-        <div class="contact-recaptcha">
-          <input type="checkbox" id="modalRecaptcha" name="recaptcha" aria-label="Non sono un robot">
-          <span class="contact-recaptcha-label">Non sono un robot</span>
-          <div class="contact-recaptcha-logo">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="30" stroke="#4A90D9" stroke-width="4"/>
-              <path d="M32 12 L52 42 H12 Z" fill="#4A90D9" opacity="0.7"/>
-              <circle cx="32" cy="32" r="8" fill="white"/>
-            </svg>
-            <span>reCAPTCHA</span>
-            <span>Privacy - Termini</span>
+        <div class="form-group">
+          <label for="modalFullName" class="visually-hidden">Full Name</label>
+          <input type="text" class="contact-input" id="modalFullName" name="fullName" placeholder="Full Name*" data-i18n-placeholder="modal_name_ph" required autocomplete="name">
+          <span class="field-error-msg" id="modalFullNameError" aria-live="polite"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="modalEmail" class="visually-hidden">Email Address</label>
+          <input type="email" class="contact-input" id="modalEmail" name="email" placeholder="Email*" data-i18n-placeholder="modal_email_ph" required autocomplete="email">
+          <span class="field-error-msg" id="modalEmailError" aria-live="polite"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="modalMessage" class="visually-hidden">Your Message</label>
+          <textarea class="contact-textarea" id="modalMessage" name="message" placeholder="Your Message*" data-i18n-placeholder="modal_msg_ph" required autocomplete="off"></textarea>
+          <span class="field-error-msg" id="modalMessageError" aria-live="polite"></span>
+        </div>
+        
+        <div class="form-group">
+          <div class="contact-check-row">
+            <input type="checkbox" id="modalPrivacy" name="privacy" required>
+            <label for="modalPrivacy" data-i18n="modal_privacy_txt">
+              I confirm that I have read, understood and agree to the
+              <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>, and I am of legal age*
+            </label>
           </div>
+          <span class="field-error-msg" id="modalPrivacyError" aria-live="polite"></span>
         </div>
 
-        <button type="submit" class="contact-submit" id="modalSendBtn">Send Message</button>
+        <div class="contact-recaptcha-wrap">
+          <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+          <span class="field-error-msg" id="modalRecaptchaError" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="contact-submit" id="modalSendBtn" data-i18n="modal_submit_btn">Send Message</button>
       </form>
     </div>
   </div>
-  
+
+  <!-- ══════════════ COOKIE & TERMS CONSENT BANNER ══════════════ -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite" role="dialog" aria-label="Cookie and Terms Consent">
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-badge">
+        <span class="pulse-dot"></span>
+        <span data-i18n="cookie_eyebrow">PRIVACY & COOKIE</span>
+      </div>
+      <div class="cookie-banner-body">
+        <p data-i18n="cookie_text">
+          Questo sito utilizza cookie ed infrastrutture analitiche per offrire la migliore esperienza. Proseguendo o cliccando "Accetta tutti", acconsenti all'uso dei cookie ed accetti i nostri <a href="terms.html" target="_blank" rel="noopener">Termini & Condizioni</a> e la <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="btn-ghost-sm cookie-btn-decline" id="cookieDecline" data-i18n="cookie_btn_decline">Solo necessari</button>
+        <button class="btn-primary cookie-btn-accept" id="cookieAccept" data-i18n="cookie_btn_accept">Accetta tutti</button>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/lang.js" defer></script>
   <script src="assets/js/menu.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
